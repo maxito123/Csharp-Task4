@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Square Root Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Square Root Calculator</h1>
+    <p>This Web Application calculates the square root of two numbers and returns the result.</p>
+</div>
+@if(ViewBag.result != null)
+{
+    <div>
+        <center>
+        <h6>
+            The number @ViewBag.HigherNo with the square root @ViewBag.HigherSqrt has a higher square 
+            root than the number @ViewBag.LowerNo with square root @ViewBag.LowerSqrt.
+        </h6>
+        </center>
+    </div>
+}
+<div>
+    
+    <form asp-controller="SqrtCalc" asp-action="Sqrt" method="POST">
+        
+        <input type="number" placeholder="First Number" name="firstNumber"/>
+        <input type="number"placeholder="Second Number" name="secondNumber"/>
+     <button type="submit">Submit</button>
+    </form>
+    
+</div>
