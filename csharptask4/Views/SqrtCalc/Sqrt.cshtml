@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Square Root Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Square Root Calculator</h1>
+    <p>This Web Application calculates the square root of two numbers and returns the result.</p>
+</div>
+<div>
+    <form asp-controller="SqrtCalc" asp-action="Sqrt" method="POST">
+        <input type="number" placeholder="First Number"/>
+        <input type="number"placeholder="Second Number"/>
+        <button type="submit">Submit</button>
+    </form>
+    
+</div>
